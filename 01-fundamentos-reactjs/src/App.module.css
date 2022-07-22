@@ -1,0 +1,26 @@
+.wrapper {
+  width: 100%;
+  max-width: 70rem;
+  /* 70rem = 1120px */
+  margin: 2rem auto;
+  padding: 0 1rem;
+  
+  display: grid;
+  grid-template-columns: 256px 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+  /* Esse align-items é necessário porque o padrão é forçar os elementos
+  a terem a mesma altura, forçando com o flex-start para que comecem pelo
+  topo e cada um respeite sua altura, pois o valor default do align-tems
+  nesse cenário seria o strech q estica tudo */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87,5%;
+    /* 87,5% é igual a 14px, pois os 100% do html padrão é 16px */
+  }
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}

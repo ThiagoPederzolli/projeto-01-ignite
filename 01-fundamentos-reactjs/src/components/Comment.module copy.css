@@ -1,0 +1,56 @@
+.comment {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.comment > img {
+    width: 3rem;
+    height: 3rem;
+    /* os 12pixels seriam o calulo de todas as bordas existentes
+    esse problema poderia ser resolvido também com a prop
+    box-sizing: initial */
+    border-radius: 8px;
+}
+
+.commentBox {
+    flex: 1;
+}
+
+.commentContent {
+    background: var(--gray-700);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.commentContent header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.authorAndTime strong {
+    display: block;
+   font-size: 0.875rem;
+   line-height: 1.6;
+}
+
+.authorAndTime time {
+    display: block;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: var(--gray-400);
+}
+
+/* a altura de um botão não é definida pelo tamanho de seu conteúdo,
+ele até pode crescer pelo conteúdo, mas sua altura é baseada no
+line-height do botão, podemos então setar o line-height como zero
+ou então font-size zero.  */
+.commentContent header button {
+    background: transparent;
+    border: 0;
+    color: var(--gray-400);
+    cursor: pointer;
+    line-height: 0;
+    border-radius: 4px;
+}

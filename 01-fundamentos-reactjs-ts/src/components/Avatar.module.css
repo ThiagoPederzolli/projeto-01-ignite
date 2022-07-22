@@ -1,0 +1,16 @@
+.avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 8px;
+}
+
+.avatarWithBorder {
+  width: calc(3rem + 12px);
+  height: calc(3rem + 12px);
+  /* os 12pixels seriam o calulo de todas as bordas existentes
+  esse problema poderia ser resolvido também com a prop
+  box-sizing: initial */
+  border-radius: 8px;
+  border: 4px solid var(--gray-800);
+  outline: 2px solid var(--green-500);
+}
